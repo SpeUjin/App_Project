@@ -1,27 +1,90 @@
-# 🎵 Flutter 음악 퀴즈 앱 프로젝트 개요
+# 1일 1습관 앱 (HabitOne)
 
-## 1. 프로젝트명
-Music Quiz Flutter App
+Flutter로 개발한 간단한 습관 형성 앱입니다.  
+사용자가 매일 한 가지 좋은 습관을 정하고, 완료 여부를 체크하며 습관을 형성할 수 있도록 도와줍니다.
 
-## 2. 프로젝트 개요
-음악을 재생하고 사용자가 곡 제목이나 아티스트를 맞히는 형식의 모바일 퀴즈 애플리케이션입니다.  
-Flutter로 개발되어 Android 및 iOS 양쪽에서 실행 가능하며, 간단한 게임 요소와 UI를 통해 사용자에게 재미를 제공합니다.
+---
 
-## 3. 주요 기능
--  **음악 재생 퀴즈**: 일부 구간의 음악을 들려주고 정답 선택
--  **객관식 퀴즈 시스템**: 보기 4개 중 정답 선택
--  **점수 계산 및 결과 화면**: 정답 수에 따라 점수 및 피드백 제공
--  **퀴즈 반복**: 여러 퀴즈 세트를 무작위로 제공
--  **반응형 UI**: Flutter 기반의 모바일 친화적 인터페이스
+## ✨ 주요 기능
 
-## 4. 개발 목표
-- Flutter와 Dart에 대한 이해 및 실습
-- 오디오 관련 Flutter 라이브러리 학습
-- 앱 구조 설계 및 퀴즈 로직 구현 경험 축적
+| 기능명             | 설명 |
+|------------------|------|
+| 습관 등록           | 사용자가 목표 습관을 등록하고 수정, 삭제할 수 있음 |
+| 오늘의 체크         | 당일 해당 습관을 완료했는지 체크할 수 있음 |
+| 진행률 표시         | 최근 7일간의 성공 여부를 그래프나 리스트로 표시 |
+| 알림 기능           | 설정된 시간에 푸시 알림 전송 (Flutter Local Notification) |
+| 데이터 저장         | 사용자의 습관 정보와 체크 여부를 로컬에 저장 (`shared_preferences`) |
+| 통계 화면           | 전체 달성 일수, 달성률 등의 통계 제공 |
 
-## 5. 개발 환경
-- 개발 언어: Dart
-- 프레임워크: Flutter
-- 지원 플랫폼: Android / iOS
-- 버전 관리: Git + GitHub
-- 디자인 도구: Figma 또는 Flutter UI Builder
+---
+
+## 🧱 기술 스택
+
+| 항목       | 기술 |
+|------------|------|
+| 개발 언어    | Dart |
+| 프레임워크   | Flutter |
+| 상태 관리    | Provider (또는 Riverpod 등 변경 가능) |
+| 로컬 저장소  | shared_preferences |
+| 알림 기능    | flutter_local_notifications |
+| 날짜 처리    | intl |
+| 그래프       | fl_chart |
+
+---
+
+## 📱 주요 화면
+
+- **홈 화면**: 오늘의 날짜, 등록한 습관 목록, 체크 버튼  
+- **습관 추가 화면**: 새 습관 제목, 알림 시간 설정  
+- **통계 화면**: 최근 일주일 성공률, 전체 달성률 시각화  
+- **설정 화면 (선택)**: 테마 변경, 앱 정보
+
+---
+
+## 📂 폴더 구조
+
+```plaintext
+/lib
+├── main.dart
+├── models/
+│   └── habit.dart
+├── screens/
+│   ├── home_screen.dart
+│   ├── add_habit_screen.dart
+│   └── stats_screen.dart
+├── widgets/
+│   ├── habit_card.dart
+│   └── progress_chart.dart
+├── services/
+│   ├── habit_service.dart
+│   └── notification_service.dart
+└── utils/
+    └── date_utils.dart
+```
+
+---
+
+## 📌 향후 개선 방향
+
+- 다크모드 지원
+- 여러 개의 습관 동시 관리 기능
+- 칭찬 메시지 애니메이션 / 리워드 기능
+- 홈 위젯 지원
+
+---
+
+## 👤 개발자 정보
+| 항목 | 내용 |
+| -- | -- |
+| 이름 | 유우진 |
+| 이메일 | believeyu@naver.com |
+| GitHub | https://github.com/SpeUjin |
+
+---
+
+## 📝 라이선스
+
+MIT License
+Copyright (c) 2025
+
+---
