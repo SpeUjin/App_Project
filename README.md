@@ -44,22 +44,14 @@ Flutter로 개발한 간단한 습관 형성 앱입니다.
 ## 📂 폴더 구조
 
 ```plaintext
-/lib
+lib/
 ├── main.dart
-├── models/
-│   └── habit.dart
-├── screens/
-│   ├── home_screen.dart
-│   ├── add_habit_screen.dart
-│   └── stats_screen.dart
-├── widgets/
-│   ├── habit_card.dart
-│   └── progress_chart.dart
-├── services/
-│   ├── habit_service.dart
-│   └── notification_service.dart
-└── utils/
-    └── date_utils.dart
+├── app.dart              ← MaterialApp 분리
+├── models/               ← 습관 모델 등
+├── providers/            ← 상태 관리 (provider)
+├── screens/              ← 각 화면 (Home, AddHabit 등)
+├── widgets/              ← 공통 위젯
+├── services/             ← 알림, 저장 관련 로직
 ```
 
 ---
